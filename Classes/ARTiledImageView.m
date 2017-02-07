@@ -17,7 +17,6 @@
 
 @interface ARTiledImageView ()
 @property (nonatomic, assign) NSInteger maxLevelOfDetail;
-@property (atomic, strong, readonly) NSCache *tileCache;
 @property (atomic, readonly) NSMutableDictionary *downloadOperations;
 @end
 
@@ -51,7 +50,6 @@
     imageSize.height = MAX(imageSize.height, minimumSize.height);
     self.frame = CGRectMake(0, 0, imageSize.width, imageSize.height);
 
-    _tileCache = [[NSCache alloc] init];
     _downloadOperations = [[NSMutableDictionary alloc] init];
 
     return self;
@@ -106,25 +104,16 @@
             CGRect tileRect = CGRectMake(tileSize.width * col, tileSize.height * row, tileSize.width, tileSize.height);
             UIImage *tileImage = [self.dataSource tiledImageView:self imageTileForLevel:level x:col y:row];
 
-            NSString *tileCacheKey = [NSString stringWithFormat:@"%@/%@_%@", @(level), @(col), @(row)];
-            ARTile *tile = [self.tileCache objectForKey:tileCacheKey];
-            if (!tile) {
-                tileRect = CGRectIntersection(self.bounds, tileRect);
-                tile = [[ARTile alloc] initWithImage:tileImage rect:tileRect];
-                [self.tileCache setObject:tile forKey:tileCacheKey cost:level];
-            }
-
-            if (!tile.tileImage && tileImage) {
-                tile.tileImage = tileImage;
-            }
-
-            if (!tile.tileImage) {
+            NSString *tileKey = [NSString stringWithFormat:@"%@/%@_%@", @(level), @(col), @(row)];
+            if (!tileImage) {
                 if (isRemote) {
                     NSURL *tileURL = [self.dataSource tiledImageView:self urlForImageTileAtLevel:level x:col y:row];
-                    [requestURLs setValue:tileURL forKey:tileCacheKey];
+                    ARTile *tile = [[ARTile alloc] initWithUrl:tileURL rect:tileRect];
+                    [requestURLs setObject:tile forKey:tileKey];
                 }
             } else {
-                [tile drawInRect:tile.tileRect blendMode:kCGBlendModeNormal alpha:1];
+                CGRect drawRect = CGRectIntersection(self.bounds, tileRect);
+                [tileImage drawInRect:drawRect blendMode:kCGBlendModeNormal alpha:1];
                 if (self.displayTileBorders) {
                     [[UIColor greenColor] set];
                     CGContextSetLineWidth(context, 6.0);
@@ -153,21 +142,23 @@
 }
 
 
+
 - (void)downloadAndRedrawTilesWithURLs:(NSDictionary *)urls
 {
     __weak typeof (self) wself = self;
 
-    for (NSString *tileCacheKey in urls.keyEnumerator) {
-        NSURL *tileURL = [urls objectForKey:tileCacheKey];
+    for (NSString *tileKey in urls.keyEnumerator) {
+        ARTile *tile = [urls objectForKey:tileKey];
+        NSURL *tileUrl = tile.tileURL;
         
         @synchronized (self.downloadOperations) {
-            if ([self.downloadOperations objectForKey:tileCacheKey]) {
+            if ([self.downloadOperations objectForKey:tileKey]) {
                 continue;
             }
         }
 
         id <SDWebImageOperation> operation = nil;
-        operation = [SDWebImageManager.sharedManager downloadWithURL:tileURL options:0 progress:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished) {
+        operation = [SDWebImageManager.sharedManager downloadWithURL:tileUrl options:0 progress:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished) {
             if (!wself || !finished) {
                 return;
             }
@@ -185,25 +176,15 @@
                 }
 
                 if (image) {
-                    ARTile *tile = [sself.tileCache objectForKey:tileCacheKey];
-                    if (!tile) {
-                        return;
-                    }
-
-                    tile.tileImage = image;
                     [sself setNeedsDisplayInRect:tile.tileRect];
 
-                    // Overwrite the existing object in cache now that we have a real cost
-                    NSInteger cost = image.size.height * image.size.width * image.scale;
-                    [sself.tileCache setObject:tile forKey:tileCacheKey cost:cost];
-
                     if ([sself.dataSource respondsToSelector:@selector(tiledImageView:didDownloadTiledImage:atURL:)]) {
-                        [sself.dataSource tiledImageView:self didDownloadTiledImage:image atURL:tileURL];
+                        [sself.dataSource tiledImageView:self didDownloadTiledImage:image atURL:tile.tileURL];
                     }
                 }
 
                 @synchronized (sself.downloadOperations) {
-                    [sself.downloadOperations removeObjectForKey:tileCacheKey];
+                    [sself.downloadOperations removeObjectForKey:tileKey];
                 }
             };
 
@@ -214,16 +195,15 @@
             }
         }];
 
-        @synchronized (self.downloadOperations) {
-            [self.downloadOperations setObject:operation forKey:tileCacheKey];
-        }
+        	@synchronized (self.downloadOperations) {
+            	[self.downloadOperations setObject:operation forKey:tileKey];
+        	}
     }
 }
 
 - (void)dealloc
 {
     [self cancelConcurrentDownloads];
-    [_tileCache removeAllObjects];
 }
 
 

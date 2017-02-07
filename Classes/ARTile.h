@@ -16,13 +16,10 @@
 /// Where does the tile sit on the frame
 @property (nonatomic, assign) CGRect tileRect;
 
-/// UIImage to draw at `tileRect`
-@property (nonatomic, strong) UIImage *tileImage;
+/// URL of the tile
+@property (nonatomic, retain) NSURL* tileURL;
 
 /// Preferred initializer
-- (instancetype)initWithImage:(UIImage *)anImage rect:(CGRect)rect;
-
-/// Draw Tile into a context
-- (void)drawInRect:(CGRect)rect blendMode:(CGBlendMode)blendMode alpha:(CGFloat)alpha;
+- (instancetype)initWithUrl:(NSURL *)url rect:(CGRect)rect;
 
 @end

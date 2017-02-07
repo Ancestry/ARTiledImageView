@@ -10,25 +10,15 @@
 
 @implementation ARTile
 
-- (instancetype)initWithImage:(UIImage *)anImage rect:(CGRect)rect
+- (instancetype)initWithUrl:(NSURL *)url rect:(CGRect)rect
 {
     self = [super init];
     if (self == nil) return nil;
-    
-    _tileImage = anImage;
+
+    _tileURL = url;
     _tileRect = rect;
-    
+
     return self;
-}
-
-- (void)drawInRect:(CGRect)rect blendMode:(CGBlendMode)blendMode alpha:(CGFloat)alpha
-{
-    [self.tileImage drawInRect:rect blendMode:blendMode alpha:alpha];
-}
-
-- (id)debugQuickLookObject 
-{
-    return self.tileImage;
 }
 
 
