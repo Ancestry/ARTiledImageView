@@ -22,6 +22,8 @@
 
 @implementation ARTiledImageView
 
+static NSInteger maxRetry = 25;
+
 - (id)initWithDataSource:(NSObject <ARTiledImageViewDataSource> *)dataSource
 {
     return [self initWithDataSource:dataSource minimumSize:CGSizeZero];
@@ -43,6 +45,7 @@
     layer.levelsOfDetail = max - min + 1;
 
     self.maxLevelOfDetail = max;
+    self.errorCount = 0;
 
     CGSize imageSize = [dataSource imageSizeForImageView:self];
     // It's possible the image will be smaller than our minimum size.
@@ -158,14 +161,8 @@
         }
 
         id <SDWebImageOperation> operation = nil;
-        operation = [SDWebImageManager.sharedManager downloadWithURL:tileUrl options:0 progress:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished) {
+        operation = [SDWebImageManager.sharedManager downloadWithURL:tileUrl options:SDWebImageRetryFailed progress:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished) {
             if (!wself || !finished) {
-                return;
-            }
-
-            if (error) {
-                // TODO: we want to mke sure this doesn't happen multiple times
-                [wself performSelector:_cmd withObject:urls afterDelay:1];
                 return;
             }
 
@@ -174,8 +171,15 @@
                 if (!sself) {
                     return;
                 }
-
-                if (image) {
+                
+                // for error and for success we need to retry drawing the rect
+                if (sself.errorCount < maxRetry) {
+                    [sself setNeedsDisplayInRect:tile.tileRect];
+                }
+                
+                if (error) {
+                    sself.errorCount++;
+                 } else if (image) {
                     [sself setNeedsDisplayInRect:tile.tileRect];
 
                     if ([sself.dataSource respondsToSelector:@selector(tiledImageView:didDownloadTiledImage:atURL:)]) {

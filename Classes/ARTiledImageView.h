@@ -34,5 +34,7 @@
 /// Current image zoom level based on the DeepZoom algorithm.
 @property (readonly, nonatomic, assign) NSInteger currentZoomLevel;
 
+/// download error count. Used so we don't retry too many times.
+@property (readwrite, nonatomic, assign) NSInteger errorCount;
 
 @end
