@@ -110,9 +110,14 @@ static NSInteger maxRetry = 25;
             NSString *tileKey = [NSString stringWithFormat:@"%@/%@_%@", @(level), @(col), @(row)];
             if (!tileImage) {
                 if (isRemote) {
+                    // always allow this call so the dataSource can log it if the zoom values are invalid
                     NSURL *tileURL = [self.dataSource tiledImageView:self urlForImageTileAtLevel:level x:col y:row];
-                    ARTile *tile = [[ARTile alloc] initWithUrl:tileURL rect:tileRect];
-                    [requestURLs setObject:tile forKey:tileKey];
+                    
+                    // only request the tile if it has valid zoom values
+                    if ([self validZoomValues:level x:col y:row]) {
+                        ARTile *tile = [[ARTile alloc] initWithUrl:tileURL rect:tileRect];
+                        [requestURLs setObject:tile forKey:tileKey];
+                    }
                 }
             } else {
                 CGRect drawRect = CGRectIntersection(self.bounds, tileRect);
@@ -131,6 +136,15 @@ static NSInteger maxRetry = 25;
     }
 }
 
+- (bool)validZoomValues:(NSInteger)level x:(NSInteger)x y:(NSInteger)y {
+    NSInteger levelMax = 16;
+    NSInteger levelMin = 8;
+    NSInteger xMax = 256;
+    NSInteger xMin = 0;
+    NSInteger yMax = 256;
+    NSInteger yMin = 0;
+    return !(level < levelMin || level > levelMax || x < xMin || x > xMax || y < yMin || y > yMax);
+}
 
 + (Class)layerClass
 {
