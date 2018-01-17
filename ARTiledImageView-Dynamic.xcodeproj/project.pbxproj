@@ -1,0 +1,392 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		223AFDC4200FDD8900AB59E7 /* ARTiledImageView_Dynamic.h in Headers */ = {isa = PBXBuildFile; fileRef = 223AFDC2200FDD8900AB59E7 /* ARTiledImageView_Dynamic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		223AFDD9200FDDD500AB59E7 /* ARTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 223AFDCC200FDDD400AB59E7 /* ARTile.m */; };
+		223AFDDA200FDDD500AB59E7 /* ARTiledImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 223AFDCD200FDDD400AB59E7 /* ARTiledImageScrollView.m */; };
+		223AFDDB200FDDD500AB59E7 /* ARTiledImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 223AFDCE200FDDD400AB59E7 /* ARTiledImageView.m */; };
+		223AFDDC200FDDD500AB59E7 /* ARLocalTiledImageDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 223AFDCF200FDDD400AB59E7 /* ARLocalTiledImageDataSource.m */; };
+		223AFDDD200FDDD500AB59E7 /* ARWebTiledImageDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 223AFDD0200FDDD400AB59E7 /* ARWebTiledImageDataSource.m */; };
+		223AFDDE200FDDD500AB59E7 /* ARImageBackedTiledView.m in Sources */ = {isa = PBXBuildFile; fileRef = 223AFDD1200FDDD400AB59E7 /* ARImageBackedTiledView.m */; };
+		223AFDDF200FDDD500AB59E7 /* ARTile.h in Headers */ = {isa = PBXBuildFile; fileRef = 223AFDD2200FDDD400AB59E7 /* ARTile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		223AFDE0200FDDD500AB59E7 /* ARTiledImageViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 223AFDD3200FDDD400AB59E7 /* ARTiledImageViewDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		223AFDE1200FDDD500AB59E7 /* ARTiledImageScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 223AFDD4200FDDD400AB59E7 /* ARTiledImageScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		223AFDE2200FDDD500AB59E7 /* ARImageBackedTiledView.h in Headers */ = {isa = PBXBuildFile; fileRef = 223AFDD5200FDDD400AB59E7 /* ARImageBackedTiledView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		223AFDE3200FDDD500AB59E7 /* ARWebTiledImageDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 223AFDD6200FDDD400AB59E7 /* ARWebTiledImageDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		223AFDE4200FDDD500AB59E7 /* ARTiledImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 223AFDD7200FDDD400AB59E7 /* ARTiledImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		223AFDE5200FDDD500AB59E7 /* ARLocalTiledImageDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 223AFDD8200FDDD400AB59E7 /* ARLocalTiledImageDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2264667A200FE0AB009B93E6 /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22646679200FE0AB009B93E6 /* WebImage.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		223AFDC0200FDD8900AB59E7 /* ARTiledImageView_Dynamic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ARTiledImageView_Dynamic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		223AFDC2200FDD8900AB59E7 /* ARTiledImageView_Dynamic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARTiledImageView_Dynamic.h; sourceTree = "<group>"; };
+		223AFDC3200FDD8900AB59E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		223AFDCC200FDDD400AB59E7 /* ARTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTile.m; sourceTree = "<group>"; };
+		223AFDCD200FDDD400AB59E7 /* ARTiledImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTiledImageScrollView.m; sourceTree = "<group>"; };
+		223AFDCE200FDDD400AB59E7 /* ARTiledImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTiledImageView.m; sourceTree = "<group>"; };
+		223AFDCF200FDDD400AB59E7 /* ARLocalTiledImageDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARLocalTiledImageDataSource.m; sourceTree = "<group>"; };
+		223AFDD0200FDDD400AB59E7 /* ARWebTiledImageDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARWebTiledImageDataSource.m; sourceTree = "<group>"; };
+		223AFDD1200FDDD400AB59E7 /* ARImageBackedTiledView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARImageBackedTiledView.m; sourceTree = "<group>"; };
+		223AFDD2200FDDD400AB59E7 /* ARTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTile.h; sourceTree = "<group>"; };
+		223AFDD3200FDDD400AB59E7 /* ARTiledImageViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTiledImageViewDataSource.h; sourceTree = "<group>"; };
+		223AFDD4200FDDD400AB59E7 /* ARTiledImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTiledImageScrollView.h; sourceTree = "<group>"; };
+		223AFDD5200FDDD400AB59E7 /* ARImageBackedTiledView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARImageBackedTiledView.h; sourceTree = "<group>"; };
+		223AFDD6200FDDD400AB59E7 /* ARWebTiledImageDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARWebTiledImageDataSource.h; sourceTree = "<group>"; };
+		223AFDD7200FDDD400AB59E7 /* ARTiledImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTiledImageView.h; sourceTree = "<group>"; };
+		223AFDD8200FDDD400AB59E7 /* ARLocalTiledImageDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARLocalTiledImageDataSource.h; sourceTree = "<group>"; };
+		22646679200FE0AB009B93E6 /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		223AFDBC200FDD8900AB59E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2264667A200FE0AB009B93E6 /* WebImage.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		223AFD99200FDD4800AB59E7 = {
+			isa = PBXGroup;
+			children = (
+				223AFDCB200FDDD400AB59E7 /* Classes */,
+				223AFDC1200FDD8900AB59E7 /* ARTiledImageView-Dynamic */,
+				223AFDA4200FDD4800AB59E7 /* Products */,
+				223AFDC8200FDDA900AB59E7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		223AFDA4200FDD4800AB59E7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				223AFDC0200FDD8900AB59E7 /* ARTiledImageView_Dynamic.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		223AFDC1200FDD8900AB59E7 /* ARTiledImageView-Dynamic */ = {
+			isa = PBXGroup;
+			children = (
+				223AFDC2200FDD8900AB59E7 /* ARTiledImageView_Dynamic.h */,
+				223AFDC3200FDD8900AB59E7 /* Info.plist */,
+			);
+			path = "ARTiledImageView-Dynamic";
+			sourceTree = "<group>";
+		};
+		223AFDC8200FDDA900AB59E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22646679200FE0AB009B93E6 /* WebImage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		223AFDCB200FDDD400AB59E7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				223AFDCC200FDDD400AB59E7 /* ARTile.m */,
+				223AFDCD200FDDD400AB59E7 /* ARTiledImageScrollView.m */,
+				223AFDCE200FDDD400AB59E7 /* ARTiledImageView.m */,
+				223AFDCF200FDDD400AB59E7 /* ARLocalTiledImageDataSource.m */,
+				223AFDD0200FDDD400AB59E7 /* ARWebTiledImageDataSource.m */,
+				223AFDD1200FDDD400AB59E7 /* ARImageBackedTiledView.m */,
+				223AFDD2200FDDD400AB59E7 /* ARTile.h */,
+				223AFDD3200FDDD400AB59E7 /* ARTiledImageViewDataSource.h */,
+				223AFDD4200FDDD400AB59E7 /* ARTiledImageScrollView.h */,
+				223AFDD5200FDDD400AB59E7 /* ARImageBackedTiledView.h */,
+				223AFDD6200FDDD400AB59E7 /* ARWebTiledImageDataSource.h */,
+				223AFDD7200FDDD400AB59E7 /* ARTiledImageView.h */,
+				223AFDD8200FDDD400AB59E7 /* ARLocalTiledImageDataSource.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		223AFDBD200FDD8900AB59E7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				223AFDE4200FDDD500AB59E7 /* ARTiledImageView.h in Headers */,
+				223AFDE5200FDDD500AB59E7 /* ARLocalTiledImageDataSource.h in Headers */,
+				223AFDE1200FDDD500AB59E7 /* ARTiledImageScrollView.h in Headers */,
+				223AFDE0200FDDD500AB59E7 /* ARTiledImageViewDataSource.h in Headers */,
+				223AFDE3200FDDD500AB59E7 /* ARWebTiledImageDataSource.h in Headers */,
+				223AFDE2200FDDD500AB59E7 /* ARImageBackedTiledView.h in Headers */,
+				223AFDC4200FDD8900AB59E7 /* ARTiledImageView_Dynamic.h in Headers */,
+				223AFDDF200FDDD500AB59E7 /* ARTile.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		223AFDBF200FDD8900AB59E7 /* ARTiledImageView-Dynamic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 223AFDC5200FDD8900AB59E7 /* Build configuration list for PBXNativeTarget "ARTiledImageView-Dynamic" */;
+			buildPhases = (
+				223AFDBB200FDD8900AB59E7 /* Sources */,
+				223AFDBC200FDD8900AB59E7 /* Frameworks */,
+				223AFDBD200FDD8900AB59E7 /* Headers */,
+				223AFDBE200FDD8900AB59E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ARTiledImageView-Dynamic";
+			productName = "ARTiledImageView-Dynamic";
+			productReference = 223AFDC0200FDD8900AB59E7 /* ARTiledImageView_Dynamic.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		223AFD9A200FDD4800AB59E7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "David Boothe";
+				TargetAttributes = {
+					223AFDBF200FDD8900AB59E7 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 223AFD9D200FDD4800AB59E7 /* Build configuration list for PBXProject "ARTiledImageView-Dynamic" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 223AFD99200FDD4800AB59E7;
+			productRefGroup = 223AFDA4200FDD4800AB59E7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				223AFDBF200FDD8900AB59E7 /* ARTiledImageView-Dynamic */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		223AFDBE200FDD8900AB59E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		223AFDBB200FDD8900AB59E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				223AFDDD200FDDD500AB59E7 /* ARWebTiledImageDataSource.m in Sources */,
+				223AFDD9200FDDD500AB59E7 /* ARTile.m in Sources */,
+				223AFDDE200FDDD500AB59E7 /* ARImageBackedTiledView.m in Sources */,
+				223AFDDB200FDDD500AB59E7 /* ARTiledImageView.m in Sources */,
+				223AFDDC200FDDD500AB59E7 /* ARLocalTiledImageDataSource.m in Sources */,
+				223AFDDA200FDDD500AB59E7 /* ARTiledImageScrollView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		223AFDA9200FDD4800AB59E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		223AFDAA200FDD4800AB59E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		223AFDC6200FDD8900AB59E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "ARTiledImageView-Dynamic/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Ancestry.ARTiledImageView-Dynamic";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		223AFDC7200FDD8900AB59E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "ARTiledImageView-Dynamic/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Ancestry.ARTiledImageView-Dynamic";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		223AFD9D200FDD4800AB59E7 /* Build configuration list for PBXProject "ARTiledImageView-Dynamic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				223AFDA9200FDD4800AB59E7 /* Debug */,
+				223AFDAA200FDD4800AB59E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		223AFDC5200FDD8900AB59E7 /* Build configuration list for PBXNativeTarget "ARTiledImageView-Dynamic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				223AFDC6200FDD8900AB59E7 /* Debug */,
+				223AFDC7200FDD8900AB59E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 223AFD9A200FDD4800AB59E7 /* Project object */;
+}

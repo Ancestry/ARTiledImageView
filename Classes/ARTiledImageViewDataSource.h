@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Artsy. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+
 @class ARTiledImageView;
 
 /**
