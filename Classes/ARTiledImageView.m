@@ -175,7 +175,7 @@ static NSInteger maxRetry = 25;
         }
 
         id <SDWebImageOperation> operation = nil;
-        operation = [SDWebImageManager.sharedManager downloadWithURL:tileUrl options:SDWebImageRetryFailed progress:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished) {
+        operation = [SDWebImageManager.sharedManager downloadImageWithURL:tileUrl options:SDWebImageRetryFailed progress:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
             if (!wself || !finished) {
                 return;
             }
