@@ -21,7 +21,7 @@
 		223AFDE3200FDDD500AB59E7 /* ARWebTiledImageDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 223AFDD6200FDDD400AB59E7 /* ARWebTiledImageDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		223AFDE4200FDDD500AB59E7 /* ARTiledImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 223AFDD7200FDDD400AB59E7 /* ARTiledImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		223AFDE5200FDDD500AB59E7 /* ARLocalTiledImageDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 223AFDD8200FDDD400AB59E7 /* ARLocalTiledImageDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2264667A200FE0AB009B93E6 /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22646679200FE0AB009B93E6 /* WebImage.framework */; };
+		CC5719A624C379020044AC04 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5719A524C379020044AC04 /* SDWebImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +42,7 @@
 		223AFDD7200FDDD400AB59E7 /* ARTiledImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTiledImageView.h; sourceTree = "<group>"; };
 		223AFDD8200FDDD400AB59E7 /* ARLocalTiledImageDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARLocalTiledImageDataSource.h; sourceTree = "<group>"; };
 		22646679200FE0AB009B93E6 /* WebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebImage.framework; path = Carthage/Build/iOS/WebImage.framework; sourceTree = "<group>"; };
+		CC5719A524C379020044AC04 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2264667A200FE0AB009B93E6 /* WebImage.framework in Frameworks */,
+				CC5719A624C379020044AC04 /* SDWebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +87,7 @@
 		223AFDC8200FDDA900AB59E7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CC5719A524C379020044AC04 /* SDWebImage.framework */,
 				22646679200FE0AB009B93E6 /* WebImage.framework */,
 			);
 			name = Frameworks;
