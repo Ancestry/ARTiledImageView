@@ -9,7 +9,7 @@
 #import "ARTiledImageView.h"
 #import "ARTile.h"
 #import <QuartzCore/CATiledLayer.h>
-#import <WebImage/UIImageView+WebCache.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 // ARTiledImageView responds to rectangle repaint, figures out which tile
 // to download from that rectangle and downloads tiles asynchronously.
@@ -175,7 +175,7 @@ static NSInteger maxRetry = 25;
         }
 
         id <SDWebImageOperation> operation = nil;
-        operation = [SDWebImageManager.sharedManager downloadImageWithURL:tileUrl options:SDWebImageRetryFailed progress:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+        operation = [SDWebImageManager.sharedManager.imageLoader requestImageWithURL:tileUrl options:SDWebImageRetryFailed context:nil progress:nil completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
             if (!wself || !finished) {
                 return;
             }

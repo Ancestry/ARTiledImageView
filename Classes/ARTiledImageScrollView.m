@@ -10,7 +10,7 @@
 #import "ARTiledImageView.h"
 #import "ARImageBackedTiledView.h"
 #import "ARTiledImageViewDataSource.h"
-#import <WebImage/UIImageView+WebCache.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 const CGFloat ARTiledImageScrollViewDefaultZoomStep = 1.5;
 
