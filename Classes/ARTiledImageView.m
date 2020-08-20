@@ -168,6 +168,10 @@ static NSInteger maxRetry = 25;
         ARTile *tile = [urls objectForKey:tileKey];
         NSURL *tileUrl = tile.tileURL;
         
+        if (!tileUrl) {
+            return;
+        }
+        
         @synchronized (self.downloadOperations) {
             if ([self.downloadOperations objectForKey:tileKey]) {
                 continue;
